@@ -10,9 +10,9 @@ import java.util.List;
 
 @Repository
 public class UserDaoImp implements UserDao {
+
    private final SessionFactory sessionFactory;
 
-   @Autowired
    public UserDaoImp(SessionFactory sessionFactory) {
       this.sessionFactory = sessionFactory;
    }
@@ -23,7 +23,7 @@ public class UserDaoImp implements UserDao {
    }
 
    @Override
-   public List<User> listUsers() {
+   public List<User> printUsers() {
       TypedQuery<User> query=sessionFactory.getCurrentSession().createQuery("from User", User.class);
       return query.getResultList();
    }

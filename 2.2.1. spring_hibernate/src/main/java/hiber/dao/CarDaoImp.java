@@ -13,7 +13,6 @@ public class CarDaoImp implements CarDao {
 
     private final SessionFactory sessionFactory;
 
-    @Autowired
     public CarDaoImp(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
@@ -25,7 +24,7 @@ public class CarDaoImp implements CarDao {
 
     @Override
     @SuppressWarnings("unchecked")
-    public List<Car> listCars() {
+    public List<Car> printCars() {
         TypedQuery<Car> query=sessionFactory.getCurrentSession().createQuery("from Car");
         return query.getResultList();
     }

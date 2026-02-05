@@ -42,8 +42,8 @@ public class MainApp {
 //      user4.setCar(car4);
 //      userService.addUser(user4);
 
-//      List<User> users = userService.listUsers();
-//      List<Car> cars = carService.listCars();
+//      List<User> users = userService.printUsers();
+//      List<Car> cars = carService.printCars();
 //      System.out.println(users);
 //      System.out.println(cars);
 
